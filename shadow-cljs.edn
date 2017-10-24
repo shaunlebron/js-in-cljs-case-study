@@ -1,7 +1,6 @@
 {:dependencies
- [[cljsjs/parinfer "3.11.0-0"]
-  [cljsjs/codemirror "5.24.0-1"]
-  [cljsjs/parinfer-codemirror "1.4.1-0"]]
+ [[cljsjs/codemirror "5.31.0-0"]
+  [cljsjs/parinfer-codemirror "1.4.1-2"]]
 
  :source-paths
  ["src"]
