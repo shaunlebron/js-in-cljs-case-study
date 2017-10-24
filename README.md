@@ -1,5 +1,10 @@
 # Using Parinfer and CodeMirror in ClojureScript
 
+__NOTE:__ currently does not build in latest shadow-cljs due to it deprecating
+`foreign-libs` in favor of npm module processing ([see here](https://code.thheller.com/blog/shadow-cljs/2017/09/15/js-dependencies-going-forward.html)),
+but should work for boot-cljs, lein-cljsbuild, etc.  I'm exploring a shadow-cljs
+fix in the `npm` branch.
+
 Example integration of the following dependencies:
 
 - [parinfer] through [cljsjs/parinfer]
