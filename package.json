@@ -1,8 +1,7 @@
 {
   "dependencies": {
     "codemirror": "^5.31.0",
-    "parinfer": "^3.11.0",
-    "parinfer-codemirror": "^1.4.1",
+    "parinfer-codemirror": "^1.4.2",
     "shadow-cljs": "^2.0.40"
   }
 }

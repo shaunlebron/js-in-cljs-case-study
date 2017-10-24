@@ -605,10 +605,6 @@ cipher-base@^1.0.0, cipher-base@^1.0.1, cipher-base@^1.0.3:
     inherits "^2.0.1"
     safe-buffer "^5.0.1"
 
-codemirror@5.28.0:
-  version "5.28.0"
-  resolved "https://registry.yarnpkg.com/codemirror/-/codemirror-5.28.0.tgz#2978d9280d671351a4f5737d06bbd681a0fd6f83"
-
 codemirror@^5.31.0:
   version "5.31.0"
   resolved "https://registry.yarnpkg.com/codemirror/-/codemirror-5.31.0.tgz#ecf3d057eb74174147066bfc7c5f37b4c4e07df2"
@@ -739,10 +735,6 @@ escape-string-regexp@^1.0.2:
 esutils@^2.0.2:
   version "2.0.2"
   resolved "https://registry.yarnpkg.com/esutils/-/esutils-2.0.2.tgz#0abf4f1caa5bcb1f7a9d8acc6dea4faaa04bac9b"
-
-eve-raphael@0.5.0:
-  version "0.5.0"
-  resolved "https://registry.yarnpkg.com/eve-raphael/-/eve-raphael-0.5.0.tgz#17c754b792beef3fa6684d79cf5a47c63c4cda30"
 
 events@^1.0.0:
   version "1.1.1"
@@ -952,17 +944,11 @@ pako@~0.2.0:
   version "0.2.9"
   resolved "https://registry.yarnpkg.com/pako/-/pako-0.2.9.tgz#f3f7522f4ef782348da8161bad9ecfd51bf83a75"
 
-parinfer-codemirror@^1.4.1:
-  version "1.4.1"
-  resolved "https://registry.yarnpkg.com/parinfer-codemirror/-/parinfer-codemirror-1.4.1.tgz#268784f369343f6488a5c5d22edcda2951252835"
+parinfer-codemirror@^1.4.2:
+  version "1.4.2"
+  resolved "https://registry.yarnpkg.com/parinfer-codemirror/-/parinfer-codemirror-1.4.2.tgz#2b9b7f27af65bf14282034a17731d4a82367d046"
   dependencies:
-    codemirror "5.28.0"
-    parinfer "3.10.0"
-    raphael "2.2.7"
-
-parinfer@3.10.0:
-  version "3.10.0"
-  resolved "https://registry.yarnpkg.com/parinfer/-/parinfer-3.10.0.tgz#cece8af579878ea885041c39a93f5aca24416152"
+    parinfer "^3.11.0"
 
 parinfer@^3.11.0:
   version "3.11.0"
@@ -1039,12 +1025,6 @@ randombytes@^2.0.0, randombytes@^2.0.1:
   resolved "https://registry.yarnpkg.com/randombytes/-/randombytes-2.0.5.tgz#dc009a246b8d09a177b4b7a0ae77bc570f4b1b79"
   dependencies:
     safe-buffer "^5.1.0"
-
-raphael@2.2.7:
-  version "2.2.7"
-  resolved "https://registry.yarnpkg.com/raphael/-/raphael-2.2.7.tgz#231b19141f8d086986d8faceb66f8b562ee2c810"
-  dependencies:
-    eve-raphael "0.5.0"
 
 readable-stream@^2.0.2, readable-stream@^2.0.5, readable-stream@^2.2.6:
   version "2.3.3"
