@@ -1,0 +1,13 @@
+{:dependencies
+ [[cljsjs/parinfer "3.11.0-0"]
+  [cljsjs/codemirror "5.24.0-1"]
+  [cljsjs/parinfer-codemirror "1.4.1-0"]]
+
+ :source-paths
+ ["src"]
+
+ :builds
+ {:app {:target :browser
+        :output-dir "public/js"
+        :asset-path "/js"
+        :modules {:main {:entries [my.app]}}}}}
