@@ -2,7 +2,7 @@
  []
 
  :source-paths
- ["src"]
+ ["src-npm"]
 
  :builds
  {:app {:target :browser
