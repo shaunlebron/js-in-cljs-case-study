@@ -5,6 +5,8 @@
   :profiles {:cljsjs {:dependencies [[cljsjs/parinfer-codemirror "1.4.1-2"]
                                      [cljsjs/codemirror "5.31.0-0"]]}}
 
+  :source-paths ["src-cljsjs" "src-npm"]
+
   :aliases
   {"build-cljsjs" ["with-profile" "cljsjs" "trampoline" "run" "-m" "clojure.main" "build-cljsjs.clj"]
    "build-foreign"                        ["trampoline" "run" "-m" "clojure.main" "build-foreign.clj"]

@@ -6,5 +6,4 @@
    :output-to "public/js/main.js"
    :output-dir "public/js/out"
    :verbose true
-   :npm-deps {:codemirror "5.31.0"
-              :parinfer-codemirror "1.4.2"}})
+   :install-deps true})
