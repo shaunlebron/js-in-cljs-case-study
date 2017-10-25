@@ -41,7 +41,7 @@ Some of these are not working, probably because I'm doing it wrong.
 |:----------------|:-------------|:-----------------------|:----------------------------|
 | `:foreign-libs` | [src-cljsjs] | ✔️ `lein build-cljsjs`  | N/A                         |
 | `:foreign-libs` | [src-npm]    | ❌ `lein build-foreign` | N/A                         |
-| `:npm-deps`     | [src-npm]    | ❌ `lein build-npm`     | N/A                         |
+| `:npm-deps`     | [src-npm]    | ❌ `lein build-npm`     | ✔️ `shadow-cljs compile app` |
 | `package.json`  | [src-npm]    | N/A                    | ✔️ `shadow-cljs compile app` |
 
 [src-cljsjs]:src-cljsjs/foo/core.cljs
