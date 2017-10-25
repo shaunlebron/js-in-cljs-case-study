@@ -35,6 +35,8 @@ have shadow-cljs look in `package.json`.
 
 ## Different build methods
 
+Some of these are not working, probably because I'm doing it wrong.
+
 | dep type        | src          | `cljs.build.api`       | `shadow-cljs`               |
 |:----------------|:-------------|:-----------------------|:----------------------------|
 | `:foreign-libs` | [src-cljsjs] | ✔️ `lein build-cljsjs`  | N/A                         |
