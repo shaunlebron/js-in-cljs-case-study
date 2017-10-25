@@ -8,4 +8,4 @@
  {:app {:target :browser
         :output-dir "public/js"
         :asset-path "/js"
-        :modules {:main {:entries [my.app]}}}}}
+        :modules {:main {:entries [foo.core]}}}}}
