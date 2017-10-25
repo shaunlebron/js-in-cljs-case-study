@@ -1,15 +1,30 @@
-# Using Parinfer and CodeMirror in ClojureScript
+_I'm writing this because I've fallen behind on how JS libs can be used from
+ClojureScript._
 
-__NOTE:__ currently does not build in latest shadow-cljs due to it deprecating
-`foreign-libs` in favor of npm module processing ([see here](https://code.thheller.com/blog/shadow-cljs/2017/09/15/js-dependencies-going-forward.html)),
-but should work for boot-cljs, lein-cljsbuild, etc.  I'm exploring a shadow-cljs
-fix in the `npm` branch.
+# Case Study: JS libs in ClojureScript
 
-Example integration of the following dependencies:
+My motivation is to recommended a path for setting up Parinfer/CodeMirror in
+cljs. These are JS libraries, so I'm testing out different options for using
+them from cljs.
 
-- [parinfer] through [cljsjs/parinfer]
-- [codemirror] through [cljsjs/codemirror]
-- [parinfer-codemirror] through [cljsjs/parinfer-codemirror]
+## JS libs we need
+
+We need to include the following libraries, either through [npm] or [cljsjs].
+
+| npm                   | cljsjs                       |
+|:----------------------|:-----------------------------|
+| [codemirror]          | [cljsjs/codemirror]          |
+| [parinfer-codemirror] | [cljsjs/parinfer-codemirror] |
+| [parinfer]            | [cljsjs/parinfer]            |
+
+cljsjs is a curated repository of cljs wrappers for popular JS libraries.
+I believe most of them use `:foreign-libs`.
+
+npm is the standard repository for JS libraries.  We can use `:npm-deps` or
+have shadow-cljs look in `package.json`.
+
+[npm]:https://www.npmjs.com/
+[cljsjs]:http://cljsjs.github.io/
 
 [parinfer]:https://github.com/shaunlebron/parinfer/tree/master/lib
 [cljsjs/parinfer]:https://github.com/cljsjs/packages/tree/master/parinfer
@@ -18,11 +33,13 @@ Example integration of the following dependencies:
 [parinfer-codemirror]:https://github.com/shaunlebron/parinfer-codemirror
 [cljsjs/parinfer-codemirror]:https://github.com/cljsjs/packages/tree/master/parinfer-codemirror
 
-__CodeMirror__ is not a proper npm package, which makes integration weird for us.
-It is only usable from the browser through a global `CodeMirror` var.
+## Different build methods
 
-__Parinfer__ is a proper npm package.
+| dep type        | src          | `cljs.build.api`      | `shadow-cljs`               |
+|:----------------|:-------------|:----------------------|:----------------------------|
+| `:foreign-libs` | [src-cljsjs] | ✔️ `lein build-cljsjs` | N/A                         |
+| `:npm-deps`     | [src-npm]    | ❌ `lein build-npm`    | N/A                         |
+| `package.json`  | [src-npm]    | N/A                   | ✔️ `shadow-cljs compile app` |
 
-__Parinfer-CodeMirror__ must adopt the weirdness of CodeMirror by not being a
-proper package.  It must assume its dependencies are global vars: `parinfer` and
-`CodeMirror`.
+[src-cljsjs]:src-cljsjs/foo/core.cljs
+[src-npm]:src-npm/foo/core.cljs
