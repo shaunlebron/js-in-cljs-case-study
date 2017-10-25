@@ -3,9 +3,9 @@ ClojureScript._
 
 # Case Study: JS libs in ClojureScript
 
-My motivation is to recommended a path for setting up Parinfer/CodeMirror in
-cljs. These are JS libraries, so I'm testing out different options for using
-them from cljs.
+My motivation is to recommend a path for setting up Parinfer/CodeMirror in cljs.
+These are JS libraries, so I'm testing out different options for using them from
+cljs.
 
 ## JS libs we need
 
@@ -38,7 +38,7 @@ have shadow-cljs look in `package.json`.
 | dep type        | src          | `cljs.build.api`       | `shadow-cljs`               |
 |:----------------|:-------------|:-----------------------|:----------------------------|
 | `:foreign-libs` | [src-cljsjs] | ✔️ `lein build-cljsjs`  | N/A                         |
-|                 | [src-npm]    | ❌ `lein build-foreign` | N/A                         |
+| `:foreign-libs` | [src-npm]    | ❌ `lein build-foreign` | N/A                         |
 | `:npm-deps`     | [src-npm]    | ❌ `lein build-npm`     | N/A                         |
 | `package.json`  | [src-npm]    | N/A                    | ✔️ `shadow-cljs compile app` |
 
