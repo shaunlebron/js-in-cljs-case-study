@@ -5,5 +5,4 @@
    :asset-path "js/out"
    :output-to "public/js/main.js"
    :output-dir "public/js/out"
-   :verbose true
-   :install-deps true})
+   :verbose true})
