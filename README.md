@@ -53,5 +53,7 @@ Some of these are not working, probably because I'm doing it wrong.
   - shadow-cljs supports this, but not in the shadow-cljs.edn file.
 - I thought cljs.build.api supported reading directly from node_modules without npm-deps, but having trouble recreating now.
 
+Also, see https://github.com/lambdaisland/thirdpartyjs/
+
 [src-cljsjs]:src-cljsjs/foo/core.cljs
 [src-npm]:src-npm/foo/core.cljs
