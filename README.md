@@ -35,11 +35,12 @@ have shadow-cljs look in `package.json`.
 
 ## Different build methods
 
-| dep type        | src          | `cljs.build.api`      | `shadow-cljs`               |
-|:----------------|:-------------|:----------------------|:----------------------------|
-| `:foreign-libs` | [src-cljsjs] | ✔️ `lein build-cljsjs` | N/A                         |
-| `:npm-deps`     | [src-npm]    | ❌ `lein build-npm`    | N/A                         |
-| `package.json`  | [src-npm]    | N/A                   | ✔️ `shadow-cljs compile app` |
+| dep type        | src          | `cljs.build.api`       | `shadow-cljs`               |
+|:----------------|:-------------|:-----------------------|:----------------------------|
+| `:foreign-libs` | [src-cljsjs] | ✔️ `lein build-cljsjs`  | N/A                         |
+|                 | [src-npm]    | ❌ `lein build-foreign` | N/A                         |
+| `:npm-deps`     | [src-npm]    | ❌ `lein build-npm`     | N/A                         |
+| `package.json`  | [src-npm]    | N/A                    | ✔️ `shadow-cljs compile app` |
 
 [src-cljsjs]:src-cljsjs/foo/core.cljs
 [src-npm]:src-npm/foo/core.cljs

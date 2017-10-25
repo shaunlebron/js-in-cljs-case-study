@@ -7,6 +7,7 @@
 
   :aliases
   {"build-cljsjs" ["with-profile" "cljsjs" "trampoline" "run" "-m" "clojure.main" "build-cljsjs.clj"]
+   "build-foreign"                        ["trampoline" "run" "-m" "clojure.main" "build-foreign.clj"]
    "build-npm"                            ["trampoline" "run" "-m" "clojure.main" "build-npm.clj"]}
 
   :clean-targets ["target" "public/js/out"])
